@@ -23,15 +23,6 @@ const TabsLayout = () => {
                     ),
                 }}
             />
-            <Tabs.Screen 
-                name="Task" 
-                options={{
-                    title: "Task",
-                    tabBarIcon: ({color}) => (
-                        <FontAwesome5 name="tasks" size={24} color={color} />
-                    ),
-                }}
-            />
         </Tabs>
     )
 }
