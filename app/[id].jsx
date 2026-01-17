@@ -1,5 +1,5 @@
-import { StyleSheet, SafeAreaView, TextInput, ScrollView, View, Text, TouchableOpacity } from 'react-native'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { StyleSheet, TextInput, ScrollView, View, Text, TouchableOpacity } from 'react-native'
+import { useSafeAreaInsets, SafeAreaView } from 'react-native-safe-area-context'
 import { useLocalSearchParams } from 'expo-router'
 import { useState, useEffect } from 'react'
 import api from '../api'
@@ -53,7 +53,7 @@ const id = () => {
 
     return (
         <SafeAreaView style={[styles.container, { paddingBottom: insets.bottom }]}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 16 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 10 }}>
                 <TouchableOpacity onPress={handleDelete} style={styles.deleteButton}>
                     <Text style={styles.deleteButtonText}>Delete</Text>
                 </TouchableOpacity>
@@ -66,6 +66,7 @@ const id = () => {
                     style={styles.input} 
                     placeholder="Enter note title" 
                     placeholderTextColor="black" 
+                    multiline
                     value={title} 
                     onChangeText={setTitle} 
                 />
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#363e55ff',
-        paddingHorizontal: 16,
+        paddingHorizontal: 10,
     },
     saveButton: {
         backgroundColor: '#4CAF50',

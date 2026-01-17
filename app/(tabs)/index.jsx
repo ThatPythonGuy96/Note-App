@@ -1,5 +1,5 @@
-import { StyleSheet, Text, SafeAreaView, ScrollView, Alert, TouchableOpacity } from 'react-native'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { StyleSheet, Text, ScrollView, Alert, TouchableOpacity } from 'react-native'
+import { useSafeAreaInsets, SafeAreaView } from 'react-native-safe-area-context'
 import NoteItem from '../../components/NoteItem'
 import api from '../../api'
 import { useState, useEffect } from 'react'
